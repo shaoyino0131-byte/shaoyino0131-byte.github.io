@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>作品二｜普發 1 萬元假補件網站示範（教學用）</title>
+<style>
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#020617;color:#e5e7eb;padding:40px; }
+.wrap { max-width:720px; margin:auto; }
+h1 { font-size:20px;margin-bottom:6px;text-align:center; }
+.sub { font-size:13px;color:#9ca3af;text-align:center;margin-bottom:18px; }
+.browser {
+  background:#020617;
+  border-radius:16px;
+  border:1px solid #1f2937;
+  box-shadow:0 20px 40px rgba(0,0,0,0.8);
+  overflow:hidden;
+}
+.bar { display:flex;align-items:center;gap:6px;padding:8px 12px;background:#020617;border-bottom:1px solid #1f2937;font-size:11px;color:#9ca3af; }
+.dot { width:10px;height:10px;border-radius:999px;background:#4b5563; }
+.url { flex:1;background:#020617;border-radius:999px;border:1px solid #374151;padding:3px 10px; }
+.url span { color:#9ca3af;font-size:11px; }
+.inner { padding:18px 22px 20px; }
+.agency { font-size:12px;color:#9ca3af;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px; }
+.logo-row { display:flex;align-items:center;gap:8px;margin-bottom:8px; }
+.logo {
+  width:24px;height:24px;border-radius:999px;
+  background:radial-gradient(circle at 30% 30%,#38bdf8,#0ea5e9);
+  display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;
+}
+.logo-text { font-size:14px;font-weight:600; }
+.title { font-size:19px;font-weight:700;margin:8px 0 4px; }
+.subtitle { font-size:12px;color:#9ca3af;margin-bottom:14px; }
+.highlight { color:#f97316;font-weight:600; }
+.status-box {
+  background:#020617;
+  border-radius:10px;
+  border:1px solid #1f2937;
+  padding:10px 12px;
+  font-size:12px;
+  margin-bottom:14px;
+}
+.row { display:flex;justify-content:space-between;margin-bottom:4px; }
+.label { color:#9ca3af; }
+.value-ok { color:#22c55e;font-weight:600; }
+.value-warn { color:#f97316;font-weight:600; }
+.value-dead { color:#facc15;font-weight:600; }
+.notice { font-size:11px;margin-bottom:12px; }
+.btn-row { display:flex;align-items:center;gap:12px;margin-bottom:14px; }
+.btn {
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  border-radius:999px;
+  padding:8px 20px;
+  border:none;
+  font-size:13px;
+  font-weight:600;
+  color:#0f172a;
+  box-shadow:0 12px 24px rgba(15,116,179,0.5);
+}
+.helper { font-size:11px;color:#9ca3af; }
+.form {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 14px;
+  font-size:11px;
+  margin-bottom:12px;
+}
+.field { display:flex;flex-direction:column;gap:2px; }
+.field label { color:#9ca3af; }
+.input {
+  background:#020617;
+  border-radius:6px;
+  border:1px solid #1f2937;
+  padding:5px 7px;
+  color:#4b5563;
+}
+.foot { font-size:10px;color:#6b7280; }
+
+.qr-wrap { margin-top:18px;display:flex;align-items:flex-start;gap:14px; }
+.qr-box-link { text-decoration:none;color:inherit; }
+.qr-img {
+  width:120px;
+  height:120px;
+  border-radius:10px;
+  border:1px solid #4b5563;
+  object-fit:contain;
+  background:#020617;
+}
+.qr-text { font-size:11px;color:#9ca3af;max-width:260px; }
+.back-link { font-size:11px;margin-top:10px; }
+.back-link a { color:#38bdf8;text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>假補件網站示範（作品二）</h1>
+  <div class="sub">此為反詐騙教育用虛構網站畫面，示範「普發 1 萬元補件」相關詐騙情境。</div>
+
+  <div class="browser">
+    <div class="bar">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="url"><span>https://pufa10k-ndf.tw/demo</span></div>
+    </div>
+    <div class="inner">
+      <div class="agency">NATIONAL DIGITAL FUND</div>
+      <div class="logo-row">
+        <div class="logo">N</div>
+        <div class="logo-text">國家數位基金中心 NDF</div>
+      </div>
+      <div class="title">2025 全民普發 10,000 元</div>
+      <div class="subtitle">領取資格狀態：<span class="highlight">⚠ 未完成補件</span></div>
+
+      <div class="status-box">
+        <div class="row"><span class="label">身分驗證</span><span class="value-ok">通過</span></div>
+        <div class="row"><span class="label">帳戶綁定</span><span class="value-warn">異常</span></div>
+        <div class="row"><span class="label">補件期限</span><span class="value-dead">剩餘 23 小時 17 分</span></div>
+      </div>
+
+      <div class="notice">若未於期限內完成補件，系統將視為自動放棄領取本次 10,000 元普發款項。</div>
+
+      <div class="btn-row">
+        <button class="btn">立即補件</button>
+        <div class="helper">請確認以下資料，並完成手機簡訊 OTP 驗證。</div>
+      </div>
+
+      <div class="form">
+        <div class="field">
+          <label>身分證字號</label>
+          <div class="input">A123456789</div>
+        </div>
+        <div class="field">
+          <label>出生年月日</label>
+          <div class="input">1995/06/18</div>
+        </div>
+        <div class="field">
+          <label>手機號碼</label>
+          <div class="input">09••••••••</div>
+        </div>
+        <div class="field">
+          <label>銀行帳號（領款用）</label>
+          <div class="input">****-****-123456</div>
+        </div>
+        <div class="field">
+          <label>手機簡訊驗證碼（OTP）</label>
+          <div class="input">輸入 6 位數驗證碼</div>
+        </div>
+      </div>
+
+      <div class="foot">本畫面為示意圖，所有單位與系統皆為虛構設計，用於數位防詐教育示範。</div>
+
+      <div class="qr-wrap">
+        <!-- 把 qr_anti_fraud.png 放在同一個資料夾 -->
+        <a href="anti_fraud.html" class="qr-box-link">
+          <img src="qr_anti_fraud.png" alt="反詐騙 QR Code" class="qr-img">
+        </a>
+        <div class="qr-text">
+          扫描或點擊 QR Code 後，將會看到這組作品真正的目的：<br>
+          「不好意思你被 AI 騙了，以後請不要隨便相信眼見為憑！」的反詐騙說明頁。
+        </div>
+      </div>
+
+      <div class="back-link">
+        <a href="index.html">← 返回假簡訊（作品一）</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

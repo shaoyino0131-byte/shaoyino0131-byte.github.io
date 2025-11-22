@@ -4,34 +4,52 @@
 <meta charset="UTF-8">
 <title>作品二｜普發 1 萬元假補件網站示範（教學用）</title>
 <style>
-body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#020617;color:#e5e7eb;padding:40px; }
-.wrap { max-width:720px; margin:auto; }
-h1 { font-size:20px;margin-bottom:6px;text-align:center; }
-.sub { font-size:13px;color:#9ca3af;text-align:center;margin-bottom:18px; }
-.browser {
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Segoe UI",sans-serif;
   background:#020617;
-  border-radius:16px;
+  color:#e5e7eb;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:36px 12px;
+}
+.wrap{max-width:820px;width:100%;}
+h1{text-align:center;font-size:20px;margin-bottom:6px;}
+.sub{text-align:center;font-size:13px;color:#9ca3af;margin-bottom:18px;}
+
+.browser{
+  background:#020617;
+  border-radius:18px;
   border:1px solid #1f2937;
-  box-shadow:0 20px 40px rgba(0,0,0,0.8);
+  box-shadow:0 24px 60px rgba(0,0,0,0.9);
   overflow:hidden;
 }
-.bar { display:flex;align-items:center;gap:6px;padding:8px 12px;background:#020617;border-bottom:1px solid #1f2937;font-size:11px;color:#9ca3af; }
-.dot { width:10px;height:10px;border-radius:999px;background:#4b5563; }
-.url { flex:1;background:#020617;border-radius:999px;border:1px solid #374151;padding:3px 10px; }
-.url span { color:#9ca3af;font-size:11px; }
-.inner { padding:18px 22px 20px; }
-.agency { font-size:12px;color:#9ca3af;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px; }
-.logo-row { display:flex;align-items:center;gap:8px;margin-bottom:8px; }
-.logo {
-  width:24px;height:24px;border-radius:999px;
-  background:radial-gradient(circle at 30% 30%,#38bdf8,#0ea5e9);
-  display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;
+.bar{
+  display:flex;align-items:center;gap:6px;
+  padding:8px 12px;background:#020617;
+  border-bottom:1px solid #1f2937;
+  font-size:11px;color:#9ca3af;
 }
-.logo-text { font-size:14px;font-weight:600; }
-.title { font-size:19px;font-weight:700;margin:8px 0 4px; }
-.subtitle { font-size:12px;color:#9ca3af;margin-bottom:14px; }
-.highlight { color:#f97316;font-weight:600; }
-.status-box {
+.dot{width:10px;height:10px;border-radius:999px;background:#4b5563;}
+.url{flex:1;background:#020617;border-radius:999px;border:1px solid #374151;padding:3px 10px;}
+.url span{font-size:11px;color:#9ca3af;}
+.inner{padding:18px 22px 20px;}
+.agency{font-size:12px;color:#9ca3af;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;}
+.logo-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.logo{
+  width:26px;height:26px;border-radius:999px;
+  background:radial-gradient(circle at 30% 30%,#38bdf8,#0ea5e9);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:700;
+}
+.logo-text{font-size:14px;font-weight:600;}
+.title{font-size:19px;font-weight:700;margin:8px 0 4px;}
+.subtitle{font-size:12px;color:#9ca3af;margin-bottom:14px;}
+.highlight{color:#f97316;font-weight:600;}
+
+.status-box{
   background:#020617;
   border-radius:10px;
   border:1px solid #1f2937;
@@ -39,14 +57,15 @@ h1 { font-size:20px;margin-bottom:6px;text-align:center; }
   font-size:12px;
   margin-bottom:14px;
 }
-.row { display:flex;justify-content:space-between;margin-bottom:4px; }
-.label { color:#9ca3af; }
-.value-ok { color:#22c55e;font-weight:600; }
-.value-warn { color:#f97316;font-weight:600; }
-.value-dead { color:#facc15;font-weight:600; }
-.notice { font-size:11px;margin-bottom:12px; }
-.btn-row { display:flex;align-items:center;gap:12px;margin-bottom:14px; }
-.btn {
+.row{display:flex;justify-content:space-between;margin-bottom:4px;}
+.label{color:#9ca3af;}
+.value-ok{color:#22c55e;font-weight:600;}
+.value-warn{color:#f97316;font-weight:600;}
+.value-dead{color:#facc15;font-weight:600;}
+
+.notice{font-size:11px;margin-bottom:12px;}
+.btn-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.btn{
   background:linear-gradient(135deg,#38bdf8,#0ea5e9);
   border-radius:999px;
   padding:8px 20px;
@@ -56,38 +75,38 @@ h1 { font-size:20px;margin-bottom:6px;text-align:center; }
   color:#0f172a;
   box-shadow:0 12px 24px rgba(15,116,179,0.5);
 }
-.helper { font-size:11px;color:#9ca3af; }
-.form {
+.helper{font-size:11px;color:#9ca3af;}
+
+.form{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px 14px;
   font-size:11px;
   margin-bottom:12px;
 }
-.field { display:flex;flex-direction:column;gap:2px; }
-.field label { color:#9ca3af; }
-.input {
+.field{display:flex;flex-direction:column;gap:2px;}
+.field label{color:#9ca3af;}
+.input{
   background:#020617;
   border-radius:6px;
   border:1px solid #1f2937;
   padding:5px 7px;
   color:#4b5563;
 }
-.foot { font-size:10px;color:#6b7280; }
 
-.qr-wrap { margin-top:18px;display:flex;align-items:flex-start;gap:14px; }
-.qr-box-link { text-decoration:none;color:inherit; }
-.qr-img {
-  width:120px;
-  height:120px;
+.foot{font-size:10px;color:#6b7280;}
+.qr-wrap{margin-top:18px;display:flex;align-items:flex-start;gap:14px;}
+.qr-box-link{text-decoration:none;color:inherit;}
+.qr-img{
+  width:120px;height:120px;
   border-radius:10px;
   border:1px solid #4b5563;
-  object-fit:contain;
   background:#020617;
+  object-fit:contain;
 }
-.qr-text { font-size:11px;color:#9ca3af;max-width:260px; }
-.back-link { font-size:11px;margin-top:10px; }
-.back-link a { color:#38bdf8;text-decoration:none; }
+.qr-text{font-size:11px;color:#9ca3af;max-width:260px;}
+.back-link{font-size:11px;margin-top:10px;}
+.back-link a{color:#38bdf8;text-decoration:none;}
 </style>
 </head>
 <body>
@@ -106,6 +125,7 @@ h1 { font-size:20px;margin-bottom:6px;text-align:center; }
         <div class="logo">N</div>
         <div class="logo-text">國家數位基金中心 NDF</div>
       </div>
+
       <div class="title">2025 全民普發 10,000 元</div>
       <div class="subtitle">領取資格狀態：<span class="highlight">⚠ 未完成補件</span></div>
 
@@ -148,12 +168,11 @@ h1 { font-size:20px;margin-bottom:6px;text-align:center; }
       <div class="foot">本畫面為示意圖，所有單位與系統皆為虛構設計，用於數位防詐教育示範。</div>
 
       <div class="qr-wrap">
-        <!-- 把 qr_anti_fraud.png 放在同一個資料夾 -->
         <a href="anti_fraud.html" class="qr-box-link">
           <img src="qr_anti_fraud.png" alt="反詐騙 QR Code" class="qr-img">
         </a>
         <div class="qr-text">
-          扫描或點擊 QR Code 後，將會看到這組作品真正的目的：<br>
+          掃描或點擊 QR Code 後，將會看到這組作品真正的目的：<br>
           「不好意思你被 AI 騙了，以後請不要隨便相信眼見為憑！」的反詐騙說明頁。
         </div>
       </div>
@@ -161,7 +180,6 @@ h1 { font-size:20px;margin-bottom:6px;text-align:center; }
       <div class="back-link">
         <a href="index.html">← 返回假簡訊（作品一）</a>
       </div>
-
     </div>
   </div>
 </div>
